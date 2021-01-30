@@ -1,0 +1,153 @@
+/*
+used material angular web components.
+see below site.
+
+https://material.angular.io/components/ 
+
+ mat-tab
+https://material.angular.io/components/tabs/examples //
+
+mat-form-field
+https://material.angular.io/components/form-field/examples
+
+input 
+https://material.angular.io/components/input/overview
+
+button
+https://material.angular.io/components/button/examples
+
+*/
+
+
+.ckt-header {
+  margin-top: 0;
+  border: 0;
+  margin-top: 3%;
+  text-align: center;
+}
+
+.ckt-main {
+  padding: 0;
+  margin-top: 0px;
+  margin-right: 40px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  height: 90vh;
+
+  .main {}
+}
+
+.tabs {
+  margin-top: 0 !important;
+  border-top: 0;
+
+  border: solid black;
+  height: 85vh;
+
+}
+
+.baseinfo {
+  display: flex;
+  justify-content: center;
+}
+
+.infobox {
+  // border: 1px solid green;
+  // display: flex;
+  // justify-content: c;
+  margin-top: 40px;
+  width: 400px;
+  height: 520px;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  // align-self: center;
+}
+
+.btn-group {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  width: 150px;
+}
+
+
+
+
+.mat-primary {
+  width: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ckt-container {
+  margin-top: 100px;
+  margin-left: 50px;
+}
+
+
+.tabs {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+
+  &-width {
+    width: 90vw;
+  }
+}
+
+/*
+mat-tab-label-content 는
+https://material.angular.io/components/tabs/overview
+패캐지 사용했음
+*/
+.mat-tab-label-content {
+  font-size: 4rem !important;
+}
+
+.deviceinfo {
+  border: 1px solid black !important;
+}
+
+label {
+  width: 40px;
+}
+
+.network {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.basic_align {
+  display: flex !important;
+
+}

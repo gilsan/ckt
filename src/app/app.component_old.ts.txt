@@ -1,0 +1,78 @@
+import { HttpClient } from '@angular/common/http';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { ClrForm } from '@clr/angular';
+import { SubSink } from 'subsink';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent implements OnInit, OnDestroy {
+
+  url = 'http://112.169.53.30:3000';
+  // url = 'http://192.168.1.25:3000';
+  private subs = new SubSink();
+
+  cktGroup: FormGroup;
+  constructor(
+    private fb: FormBuilder,
+    private http: HttpClient,
+  ) { }
+
+  @ViewChild(ClrForm, { static: true }) clrForm;
+
+  ngOnInit(): void {
+    this.init();
+  }
+
+  init(): void {
+    this.cktGroup = this.fb.group({
+      camerID: [],
+      deviceModel: [],
+      serialNo: ['123456'],
+      installDate: [],
+      useyn: [],
+      siteID: [],
+      blockID: [],
+      zoneID: [],
+      entryID: [],
+      localIP: [],
+      localPort: [],
+      netMask: [],
+      gateway: [],
+      hostIP: [],
+      hostPort: [],
+      url: [],
+      userID: [],
+      password: [],
+      mqttHostIP: [],
+      mqttUserID: [],
+      mqttPassword: [],
+      topic: [],
+      scale: [],
+      margin: []
+    });
+  }
+
+  submit(): void {
+    console.log(this.cktGroup.value);
+    if (this.cktGroup.invalid) {
+      this.clrForm.markAsTouched();
+    } else {
+      this.subs.sink = this.http.post(`${this.url}/makefile`, this.cktGroup.value)
+        .subscribe(data => {
+          console.log(data);
+          alert('화일을 만들었습니다.');
+        });
+    }
+  }
+
+  ngOnDestroy(): void {
+    this.subs.unsubscribe();
+  }
+
+
+
+}

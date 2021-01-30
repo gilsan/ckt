@@ -1,0 +1,41 @@
+[CameraBaseInfo]
+cameraID= 1
+cameraModel=ms_mini
+cameraserialNum= 1423619083210
+cameraInstallDate= 202011111922
+cameraUseyn= 0
+[CameraLocaionInfo]
+siteID= siteID
+blockID= block
+zoneID= zone
+[CameraNetworkInfo]
+localIP= 127.0.0.1
+localPortIr= 5555
+locallPortRtsp= 8868
+netmask= 255.255.255.0
+gateway= 0.0.0.0
+[CameraHostInfo]
+hostIrRecon= 192.168.1.100
+hostPortRecon= 8866
+hostIpCloud= 192.168.1.200
+hostPortCloud= 0000
+hostIpMqtt= 192.168.1.100
+hostportMqtt=8869
+mqttUserId=ckt_user
+mqttPassword=ckt_user
+mqttPubTopic=camera/test1
+[CamerParameterInfo]
+flagOpMode=0
+flagFaceTemperature=0
+flagFaceMask=0
+flagRecongnition=0
+flagLiveness=1
+threshold=0.9
+iou_threshold=0.4
+[MargineInfo]
+marginX=100
+marginY=80
+scaleX=0.52
+scaleY=0.48
+[FaceMinSizeInfo]
+faceMinSize=40

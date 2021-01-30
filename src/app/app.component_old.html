@@ -1,0 +1,296 @@
+<div class="ckt-main">
+  <div class="ckt-container">
+    <form clrForm [formGroup]="cktGroup">
+          <div class="clr-row">
+             <div class="clr-col-4">
+                 <span></span>
+             </div>
+             <div class="clr-col-6">
+                 <label>Device Info</label>
+             </div>
+             <div class="clr-col-2">
+                 <span></span>
+             </div>
+          </div>
+          <div class="clr-row">
+            <div class="clr-col-1"></div>
+            <div class="clr-col-10">
+              <div class="clr-row">
+                 <div class="clr-col-5 deviceinfo">
+                     <label>Device Info</label>
+                     <clr-input-container  class="basic_align">
+                       <label>Camera ID</label>
+                       <input clrInput type="text" formControlName="camerID" name="example" />
+                     </clr-input-container>
+    
+                     <clr-combobox-container>
+                      <label>Device Model</label>
+                      <clr-combobox  name="two" formControlName="deviceModel" placeholder="Select a number">
+                        <clr-options>
+                          <clr-option clrValue="1">1</clr-option>
+                          <clr-option clrValue="2">2</clr-option>
+                          <clr-option clrValue="3">3</clr-option>
+                        </clr-options>
+                      </clr-combobox>
+                    </clr-combobox-container>
+                    <clr-input-container  class="basic_align">
+                      <label>Serial No</label>
+                      <input clrInput type="text" formControlName="serialNo" name="example" />
+                    </clr-input-container>
+                    <clr-date-container>
+                      <label>Install Date</label>
+                      <input type="date" clrDate formControlName="installDate" >
+                    </clr-date-container>
+                    <clr-combobox-container>
+                       <label>Use Y/N</label>
+                       <clr-combobox   formControlName="useyn">
+                           <clr-options>
+                              <clr-option clrValue="Y">Y</clr-option>
+                              <clr-option clrValue="N">N</clr-option>               
+                           </clr-options>
+                       </clr-combobox>
+                     </clr-combobox-container>
+                     <div><br /></div>
+                 </div>
+                 <div class="clr-col-2"></div>
+                 <div class="clr-col-5  deviceinfo">
+                  <label>Device Location Info</label>
+                  <clr-input-container>
+                    <label>Site ID</label>
+                    <input clrInput type="text" formControlName="siteID" />
+                  </clr-input-container>
+                  <clr-input-container>
+                    <label>Block ID</label>
+                    <input clrInput type="text"  formControlName="blockID" />
+                  </clr-input-container>
+                  <clr-input-container>
+                    <label>Zone ID</label>
+                    <input clrInput type="text"  formControlName="zoneID" />
+                  </clr-input-container>
+                  <clr-combobox-container>
+                    <label>Entry ID</label>
+                    <clr-combobox  name="two" formControlName="entryID">
+                      <clr-options>
+                        <clr-option clrValue="in">in</clr-option>
+                        <clr-option clrValue="out">out</clr-option>  
+                        <clr-option clrValue="none">none</clr-option>             
+                      </clr-options>
+                    </clr-combobox>
+                  </clr-combobox-container>
+                 </div>
+              </div>
+               
+            </div>
+            <div class="clr-col-1"></div>
+          </div>
+           <div class="clr-row" class="network">
+               <div class="clr-col-12" >
+                 <label>Device Network</label>
+               </div>
+           </div>
+
+           <div class="clr-row">
+            <div class="clr-col-1"></div>
+            <div class="clr-col-10">
+              <div class="clr-row">
+                <div class="clr-col-5   deviceinfo">
+                  <label>Local Info</label>
+                  <clr-input-container>
+                    <label>Local IP</label>
+                    <input clrInput type="text"  formControlName="localIP" />
+                  </clr-input-container>
+                  <clr-input-container>
+                    <label>Local Port</label>             
+                    <input clrInput type="text"  formControlName="localPort" />
+                  </clr-input-container>
+                  <clr-input-container>
+                    <label>NetMask</label>
+                    <input clrInput type="text" formControlName="netMask" />
+                  </clr-input-container>
+                  <clr-input-container>
+                    <label>Gateway</label>
+                    <input clrInput type="text"  formControlName="gateway" />
+                  </clr-input-container>
+                  <div><br /></div>
+                </div>
+                <div class="clr-col-2"></div>
+                <div class="clr-col-5   deviceinfo">
+                  <label>Host Info</label>
+                  <clr-input-container>
+                    <label>Host IP</label>
+                    <input clrInput type="text"  formControlName="hostIP" />
+                  </clr-input-container>
+                  <clr-input-container>
+                    <label>Host Port</label>
+                    <input clrInput type="text"  formControlName="hostPort" />
+                  </clr-input-container>
+                </div>
+              </div>
+  
+            </div>
+            <div class="clr-col-1"></div>             
+           </div>
+
+           <div class="clr-row">
+              <div class="clr-col-1"></div>
+              <div class="clr-col-10">
+                 <div class="clr-row">
+                     <div class="clr-col-5 deviceinfo">
+                      <label>RTSP</label>
+                      <clr-input-container>
+                        <label>URL</label>
+                        <input clrInput type="text"  formControlName="url" />
+                      </clr-input-container>
+                      <clr-input-container>
+                        <label>User ID</label>             
+                        <input clrInput type="text"formControlName="userID" />
+                      </clr-input-container>
+                      <clr-input-container>
+                        <label>Password</label>
+                        <input clrInput type="password"  formControlName="password" />
+                      </clr-input-container>
+                      <div></div>
+                     </div>
+                     <div class="clr-col-2"></div>
+                     <div class="clr-col-5 deviceinfo">
+                      <label>MQTT</label>
+                      <clr-input-container>
+                        <label>HOST IP</label>
+                        <input clrInput type="text" formControlName="mqttHostIP" />
+                      </clr-input-container>
+                      <clr-input-container>
+                        <label>User ID</label>             
+                        <input clrInput type="text" formControlName="mqttUserID" />
+                      </clr-input-container>
+                      <clr-input-container>
+                        <label>Password</label>
+                        <input clrInput type="password"  formControlName="mqttPassword" />
+                      </clr-input-container>
+                      <clr-input-container>
+                        <label>Topic</label>
+                        <input clrInput type="text"  formControlName="topic" />
+                      </clr-input-container>
+                      <div><br /></div>
+                     </div>
+                 </div>
+              </div>
+              <div class="clr-col-1"></div>
+           </div>
+
+           <div class="clr-row">
+              <div class="clr-col-1"></div>
+              <div class="clr-col-10">
+                 <div class="clr-row">
+                    <div class="clr-col-5  deviceinfo">
+                      <clr-input-container>
+                        <label>비율</label>
+                        <input clrInput type="text"  formControlName="scale" />
+                      </clr-input-container>
+                      <clr-input-container>
+                        <label>마진</label>
+                        <input clrInput type="text" formControlName="margin" />
+                      </clr-input-container>
+                      <div><br ></div>
+                    </div>
+                    <div class="clr-col-2"></div>
+                    <div class="clr-col-5  deviceinfo">
+                      <button class="btn btn-primary" (click)="submit()">확인</button>
+                    </div>
+                 </div>
+              </div>
+              <div class="clr-col-1"></div>
+           </div>
+          
+
+           
+      </form>
+    </div>
+  </div>    
+
+<!-- 
+  
+     <div class="container3">
+       <div>
+          <form  clrForm>
+            <label>Device Network Info</label>
+            <label>Local Info</label>
+            <clr-input-container>
+              <label>Local IP</label>
+              <input clrInput type="text"   name="example" />
+            </clr-input-container>
+            <clr-input-container>
+              <label>Local Port</label>             
+              <input clrInput type="text"   name="example" />
+            </clr-input-container>
+            <clr-input-container>
+              <label>NetMask</label>
+              <input clrInput type="text"   name="example" />
+            </clr-input-container>
+            <clr-input-container>
+              <label>Gateway</label>
+              <input clrInput type="text"   name="example" />
+            </clr-input-container>
+          </form>
+       </div>
+     </div>
+     <div class="container4">
+       <div>
+           <form  clrForm> 
+            <label>Host Info</label>
+            <clr-input-container>
+              <label>Host IP</label>
+              <input clrInput type="text"   name="example" />
+            </clr-input-container>
+            <clr-input-container>
+              <label>Host Port</label>
+              <input clrInput type="text"   name="example" />
+            </clr-input-container>
+           </form>
+       </div>
+     </div>
+     <div class="container5">
+       <div>
+        <form  clrForm>          
+          <label>RTSP</label>
+          <clr-input-container>
+            <label>URL</label>
+            <input clrInput type="text"   name="example" />
+          </clr-input-container>
+          <clr-input-container>
+            <label>User ID</label>             
+            <input clrInput type="text"   name="example" />
+          </clr-input-container>
+          <clr-input-container>
+            <label>Password</label>
+            <input clrInput type="text"   name="example" />
+          </clr-input-container>
+        </form>
+       </div>
+     </div>
+     <div class="container6">
+       <div>
+        <form  clrForm>          
+          <label>MQTT</label>
+          <clr-input-container>
+            <label>HOST IP</label>
+            <input clrInput type="text"   name="example" />
+          </clr-input-container>
+          <clr-input-container>
+            <label>User ID</label>             
+            <input clrInput type="text"   name="example" />
+          </clr-input-container>
+          <clr-input-container>
+            <label>Password</label>
+            <input clrInput type="text"   name="example" />
+          </clr-input-container>
+          <clr-input-container>
+            <label>Topic</label>
+            <input clrInput type="text"   name="example" />
+          </clr-input-container>
+
+        </form> 
+       </div>
+     </div>
+   </div>
+ </div>
+ -->
