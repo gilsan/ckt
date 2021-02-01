@@ -30,13 +30,10 @@
 
                    <mat-form-field appearance="legacy"  class="item">
                      <mat-label>Camer Use YN</mat-label>
-                     <input matInput placeholder="0: yes, 1: no" 
-                     formControlName="cameraUseYN"
-                     [matAutocomplete]="camerause"> 
-                     <mat-autocomplete autoActiveFirstOption #camerause="matAutocomplete">
-                       <mat-option value="0">Y</mat-option>
-                       <mat-option value="1">N</mat-option>
-                     </mat-autocomplete>
+                     <mat-select formControlName="cameraUseYN">
+                       <mat-option value="0">Yes</mat-option>
+                       <mat-option value="1">No</mat-option>
+                     </mat-select>
                    </mat-form-field>
                 </div>
               </mat-tab>
@@ -138,75 +135,45 @@
               </mat-tab>
               <mat-tab label="ParameterInfo">
                <div class="infobox">
-                 <!-- <mat-form-field appearance="legacy" class="item">
-                   <mat-label>flag op mode</mat-label>
-                   
-                 </mat-form-field> -->
-
                  <mat-form-field appearance="legacy" class="item">
                    <mat-label>flag op mode</mat-label>
-                   <input matInput placeholder="0" formControlName="flagOpMode"
-                   [matAutocomplete]="flagopmode">
-                   <mat-autocomplete autoActiveFirstOption  #flagopmode="matAutocomplete">
-                      <mat-option value="0">Yes</mat-option>
-                      <mat-option value="1">No</mat-option>
-                   </mat-autocomplete>
-                   <!-- <select matNativeControl formControlName="flagOpMode">
-                     <option [ngValue]="0" [selected]="selected(0)">Yes</option>
-                     <option [ngValue]="1"  [selected]="selected(1)">No</option>
-                   </select> -->
-
+                   <mat-select formControlName="flagOpMode">
+                    <mat-option value="0">Yes</mat-option>
+                    <mat-option value="1">No</mat-option>
+                  </mat-select>                   
                  </mat-form-field>
 
                  
                  <mat-form-field appearance="legacy"  class="item">
                    <mat-label>flag face temperature</mat-label>
-                   <input matInput placeholder="0" 
-                   formControlName="flagFaceTemperature"
-                   [matAutocomplete]="flagfacetemperature"> 
-                   <mat-autocomplete autoActiveFirstOption #flagfacetemperature="matAutocomplete">
-                      <mat-option value="0">0</mat-option>
-                      <mat-option value="36.1">36.1&#176;C</mat-option>
-                      <mat-option value="36.2">36.2&#176;C</mat-option>
-                      <mat-option value="36.3">36.3&#176;C</mat-option>
-                      <mat-option value="36.4">36.4&#176;C</mat-option>
-                      <mat-option value="36.5">36.5&#176;C</mat-option>
-                      <mat-option value="36.6">36.6&#176;C</mat-option>
-                      <mat-option value="36.7">36.7&#176;C</mat-option>
-                      <mat-option value="36.8">36.8&#176;C</mat-option>
-                      <mat-option value="36.9">36.9&#176;C</mat-option>
-
-                   </mat-autocomplete> 
+                   <mat-select formControlName="flagFaceTemperature">
+                    <mat-option value="0">Yes</mat-option>
+                    <mat-option value="1">No</mat-option>
+                  </mat-select>                    
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
                    <mat-label>flag face mask</mat-label>
-                   <input matInput placeholder="0: Yes, 1: No" formControlName="flagFaceMask"
-                   [matAutocomplete]="flagfacemask"> 
-                   <mat-autocomplete autoActiveFirstOption #flagfacemask="matAutocomplete">
-                     <mat-option value="0">Yes</mat-option>
-                     <mat-option value="1">No</mat-option>
-                   </mat-autocomplete>
+                   <mat-select formControlName="flagFaceMask">
+                    <mat-option value="0">Yes</mat-option>
+                    <mat-option value="1">No</mat-option>
+                  </mat-select>                   
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
                    <mat-label>flag recognition</mat-label>
-                   <input matInput placeholder="0: Yes, 1: No" formControlName="flagRecognition"
-                   [matAutocomplete]="flagrecognition">
-                   <mat-autocomplete autoActiveFirstOption #flagrecognition="matAutocomplete">
-                     <mat-option value="0">Yes</mat-option>
-                     <mat-option value="1">No</mat-option>
-                   </mat-autocomplete>
+                   <mat-select formControlName="flagRecognition">
+                    <mat-option value="0">Yes</mat-option>
+                    <mat-option value="1">No</mat-option>
+                  </mat-select>                    
                  </mat-form-field>                   
 
                  <mat-form-field appearance="legacy"  class="item">
                    <mat-label>flag liveness</mat-label>
-                   <input matInput placeholder="0: Yes, 1: No" formControlName="flagLiveness"
-                   [matAutocomplete]="flagliveness"> 
-                   <mat-autocomplete  autoActiveFirstOption #flagliveness="matAutocomplete">
-                     <mat-option value="0">Yes</mat-option>
-                     <mat-option value="1">No</mat-option>                     
-                   </mat-autocomplete>
+                   <mat-select formControlName="flagLiveness">
+                    <mat-option value="0">Yes</mat-option>
+                    <mat-option value="1">No</mat-option>
+                  </mat-select>                   
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">

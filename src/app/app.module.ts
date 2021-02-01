@@ -9,12 +9,14 @@ import { MaterialModule } from './material.module';
 import { LoginComponent } from './login/login.component';
 import { CamerasetComponent } from './cameraset/cameraset.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    CamerasetComponent
+    CamerasetComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,

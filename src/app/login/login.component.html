@@ -3,16 +3,16 @@
 <mat-card>
   <mat-card-content>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
-      <h2>Log In</h2>
+      <h2>로그인</h2>
       <mat-form-field class="full-width-input">
-        <input matInput placeholder="user" formControlName="user">
+        <input matInput placeholder="사용자" formControlName="user">
          
       </mat-form-field>
       <mat-form-field class="full-width-input">
-        <input matInput type="password" placeholder="Password" formControlName="pw">
+        <input matInput type="password" placeholder="암호" formControlName="pw">
          
       </mat-form-field>
-      <button mat-raised-button color="primary">Login</button>
+      <button mat-raised-button color="primary">로그인</button>
     </form>
   </mat-card-content>
 </mat-card>

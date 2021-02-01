@@ -93,8 +93,8 @@ export class LoginComponent implements OnInit {
     if (this.form.value.user === 'admin' && this.form.value.pw === '123456') {
       if (this.flag === null || this.flag === undefined || this.flag === '0') {
         const newpw = this.randomString(6, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
-        localStorage.setItem('cktUser', JSON.stringify({ initFlag: '1', pw: newpw }));
-        alert(`비밀번호가 ${newpw} 로 변경 되었습니다.`);
+        // localStorage.setItem('cktUser', JSON.stringify({ initFlag: '1', pw: newpw }));
+        // alert(`비밀번호가 ${newpw} 로 변경 되었습니다.`);
       }
     } else if (this.form.value.user === 'admin' && this.form.value.pw === this.passwd) {
       if (this.flag === '1') {
@@ -103,6 +103,10 @@ export class LoginComponent implements OnInit {
 
     }
 
+  }
+
+  goChangepw(): void {
+    this.router.navigate(['/changepw']);
   }
 
   randomString(length, chars): string {

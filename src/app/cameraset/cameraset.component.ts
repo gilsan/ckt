@@ -252,7 +252,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
       mqttUserID: ['ckt_user'],
       mqttPassword: ['ckt_user'],
       mqttPubTopic: ['camera/test1'],
-      flagOpMode: [0],
+      flagOpMode: ['0'],
       flagFaceTemperature: ['0'],
       flagFaceMask: ['0'],
       flagRecognition: ['0'],
