@@ -27,7 +27,7 @@ export class ChangePasswordComponent implements OnInit {
           }
         });
     } else {
-      alert('비밀번호가 일치하지 않습니다.');
+      alert('Not match password.');
     }
   }
 

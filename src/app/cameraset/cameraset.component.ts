@@ -285,7 +285,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
       this.subs.sink = this.http.post(`${this.url}/makefile`, this.cktGroup.value)
         .subscribe(data => {
           // console.log(data);
-          alert('화일을 만들었습니다.');
+          alert('New file made.');
         });
     }
   }
@@ -293,7 +293,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
   reboot(): void {
     this.http.get(`${this.url}/reboot`)
       .subscribe(data => {
-        alert('실행했습니다.');
+        alert('Execute.');
       });
   }
 
