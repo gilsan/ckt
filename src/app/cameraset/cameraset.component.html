@@ -20,7 +20,7 @@
 
                    <mat-form-field appearance="legacy"  class="item">
                      <mat-label>Camera Serial Number</mat-label>
-                     <input matInput placeholder="1423593456" formControlName="cameraSerialNumber">   
+                     <input matInput placeholder="1423593456" formControlName="cameraserialNum">   
                    </mat-form-field>
 
                    <mat-form-field appearance="legacy"  class="item">
@@ -30,7 +30,7 @@
 
                    <mat-form-field appearance="legacy"  class="item">
                      <mat-label>Camer Use YN</mat-label>
-                     <mat-select formControlName="cameraUseYN">
+                     <mat-select formControlName="cameraUseyn">
                        <mat-option value="0">Yes</mat-option>
                        <mat-option value="1">No</mat-option>
                      </mat-select>
@@ -64,12 +64,12 @@
 
                  <mat-form-field appearance="legacy"  class="item">
                    <mat-label>Local Port ir</mat-label>
-                   <input matInput placeholder="5555" formControlName="localPortIR">  
+                   <input matInput placeholder="5555" formControlName="localPortIr">  
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
                    <mat-label>Local port rtsp</mat-label>
-                   <input matInput placeholder="8868" formControlName="localPortRTSP">   
+                   <input matInput placeholder="8868" formControlName="localPortRtsp">   
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
@@ -117,7 +117,7 @@
 
                  <mat-form-field appearance="legacy"  class="item">
                    <mat-label>mqtt user id</mat-label>
-                   <input matInput placeholder="ctk_user" formControlName="mqttUserID">   
+                   <input matInput placeholder="ctk_user" formControlName="mqttUserId">   
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
@@ -213,10 +213,12 @@
               </div>                    
               </mat-tab>
               <mat-tab label="FaceMinSizeInfo">
-               <mat-form-field appearance="legacy"  class="item">
-                 <mat-label>face min size</mat-label>
-                 <input matInput placeholder="40" formControlName="faceMinSize">   
-               </mat-form-field>                  
+                <div class="infobox">
+                  <mat-form-field appearance="legacy"  class="item">
+                    <mat-label>face min size</mat-label>
+                    <input matInput placeholder="40" formControlName="faceMinSize">   
+                  </mat-form-field>                  
+                </div>                 
               </mat-tab>
             </mat-tab-group>
           </div>

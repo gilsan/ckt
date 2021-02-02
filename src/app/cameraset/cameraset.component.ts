@@ -32,7 +32,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.init();
 
-    /*
+
     this.http.get(`${this.url}/readfile`)
       .subscribe((data: any) => {
         console.log(data);
@@ -64,7 +64,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
         let flagRecongnition: string;
         let flagLiveness: string;
         let threshold: string;
-        let iouthreshold: string;
+        let iou_threshold: string;
         let marginX: string;
         let marginY: string;
         let scaleX: string;
@@ -73,7 +73,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
 
 
         const result = this.loadData(data);
-
+        console.log(data);
         const value = result.filter(item => item[0].charAt(0) !== '[');
         value.forEach(item => {
           const items = item[0].split('=');
@@ -136,7 +136,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
           } else if (items[0] === 'threshold') {
             threshold = items[1];
           } else if (items[0] === 'iouThreshold') {
-            iouthreshold = items[1];
+            iou_threshold = items[1];
           } else if (items[0] === 'marginX') {
             marginX = items[1];
           } else if (items[0] === 'marginY') {
@@ -177,7 +177,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
           this.cktGroup.patchValue({ flagRecongnition });
           this.cktGroup.patchValue({ flagLiveness });
           this.cktGroup.patchValue({ threshold });
-          this.cktGroup.patchValue({ iouthreshold });
+          this.cktGroup.patchValue({ iou_threshold });
           this.cktGroup.patchValue({ marginX });
           this.cktGroup.patchValue({ marginY });
           this.cktGroup.patchValue({ scaleX });
@@ -186,7 +186,6 @@ export class CamerasetComponent implements OnInit, OnDestroy {
         });
 
       });
-      */
 
     /* 
     this.http.get(`${this.url}/readfile`)
@@ -236,15 +235,15 @@ export class CamerasetComponent implements OnInit, OnDestroy {
     this.cktGroup = this.fb.group({
       cameraID: ['1'],
       cameraModel: ['ms_mini'],
-      cameraSerialNumber: ['1423619083210'],
+      cameraserialNum: ['1423619083210'],
       cameraInstallDate: ['202011111922'],
-      cameraUseYN: ['0'],
+      cameraUseyn: ['0'],
       siteID: ['site'],
       blockID: ['block'],
       zoneID: ['zone'],
       localIP: ['127.0.0.1'],
-      localPortIR: ['5555'],
-      localPortRTSP: ['8868'],
+      localPortIr: ['5555'],
+      localPortRtsp: ['8868'],
       netmask: ['255.255.255.0'],
       gateway: ['0.0.0.0'],
       hostIpRecon: ['192.168.1.100'],
@@ -253,7 +252,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
       hostPortCloud: ['0000'],
       hostIpMqtt: ['192.168.1.100'],
       hostportMqtt: ['8869'],
-      mqttUserID: ['ckt_user'],
+      mqttUserId: ['ckt_user'],
       mqttPassword: ['ckt_user'],
       mqttPubTopic: ['camera/test1'],
       flagOpMode: ['0'],
