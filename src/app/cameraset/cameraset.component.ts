@@ -43,7 +43,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
         let cameraUseyn: string;
         let siteID: string;
         let blockID: string;
-        let zoneID: string;
+        let groupID: string;
         let localIP: string;
         let localPortIr: string;
         let localPortRtsp: string;
@@ -92,8 +92,8 @@ export class CamerasetComponent implements OnInit, OnDestroy {
             siteID = items[1];
           } else if (items[0] === 'blockID') {
             blockID = items[1];
-          } else if (items[0] === 'zoneID') {
-            zoneID = items[1];
+          } else if (items[0] === 'groupID') {
+            groupID = items[1];
           } else if (items[0] === 'localIP') {
             localIP = items[1];
           } else if (items[0] === 'localPortIr') {
@@ -156,7 +156,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
           this.cktGroup.patchValue({ cameraUseyn });
           this.cktGroup.patchValue({ siteID });
           this.cktGroup.patchValue({ blockID });
-          this.cktGroup.patchValue({ zoneID });
+          this.cktGroup.patchValue({ groupID });
           this.cktGroup.patchValue({ localIP });
           this.cktGroup.patchValue({ localPortIr });
           this.cktGroup.patchValue({ localPortRtsp });
@@ -199,7 +199,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
           cameraUseyn: data.cameraUseyn,
           siteID: data.siteID,
           blockID: data.blockID,
-          zoneID: data.zoneID,
+          groupID: data.groupID,
           localIP: data.localIP,
           localPortIr: data.localPortIr,
           locallPortRtsp: data.locallPortRtsp,
@@ -240,7 +240,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
       cameraUseyn: ['0'],
       siteID: ['site'],
       blockID: ['block'],
-      zoneID: ['zone'],
+      groupID: ['zone'],
       localIP: ['127.0.0.1'],
       localPortIr: ['5555'],
       localPortRtsp: ['8868'],
