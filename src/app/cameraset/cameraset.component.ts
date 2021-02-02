@@ -240,7 +240,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
       cameraUseyn: ['0'],
       siteID: ['site'],
       blockID: ['block'],
-      groupID: ['zone'],
+      groupID: ['group'],
       localIP: ['127.0.0.1'],
       localPortIr: ['5555'],
       localPortRtsp: ['8868'],
