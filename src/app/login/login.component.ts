@@ -95,6 +95,8 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/camera']);
       } else if (data.message === 'CHANGEPW') {
         this.router.navigate(['/changepw']);
+      } else if (data.message === 'NOTMATCHPW') {
+        alert('암호가 맞지 않습니다.');
       } else {
         alert('시스템에 접근할수 없습니다.');
       }

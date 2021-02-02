@@ -5,6 +5,7 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { map, filter } from 'rxjs/operators';
 import { ClrForm } from '@clr/angular';
 import { ICamera } from '../camer.info';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cameraset',
@@ -25,13 +26,16 @@ export class CamerasetComponent implements OnInit, OnDestroy {
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
+    private router: Router
   ) { }
   disableSelect = new FormControl(false);
   ngOnInit(): void {
     this.init();
 
+    /*
     this.http.get(`${this.url}/readfile`)
       .subscribe((data: any) => {
+        console.log(data);
         let cameraID: string;
         let cameraModel: string;
         let cameraserialNum: string;
@@ -60,7 +64,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
         let flagRecongnition: string;
         let flagLiveness: string;
         let threshold: string;
-        let iou_threshold: string;
+        let iouthreshold: string;
         let marginX: string;
         let marginY: string;
         let scaleX: string;
@@ -131,8 +135,8 @@ export class CamerasetComponent implements OnInit, OnDestroy {
             flagLiveness = items[1];
           } else if (items[0] === 'threshold') {
             threshold = items[1];
-          } else if (items[0] === 'iou_threshold') {
-            iou_threshold = items[1];
+          } else if (items[0] === 'iouThreshold') {
+            iouthreshold = items[1];
           } else if (items[0] === 'marginX') {
             marginX = items[1];
           } else if (items[0] === 'marginY') {
@@ -173,7 +177,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
           this.cktGroup.patchValue({ flagRecongnition });
           this.cktGroup.patchValue({ flagLiveness });
           this.cktGroup.patchValue({ threshold });
-          this.cktGroup.patchValue({ iou_threshold });
+          this.cktGroup.patchValue({ iouthreshold });
           this.cktGroup.patchValue({ marginX });
           this.cktGroup.patchValue({ marginY });
           this.cktGroup.patchValue({ scaleX });
@@ -182,7 +186,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
         });
 
       });
-
+      */
 
     /* 
     this.http.get(`${this.url}/readfile`)
@@ -258,7 +262,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
       flagRecognition: ['0'],
       flagLiveness: ['1'],
       threshold: ['0.9'],
-      iouThreshold: ['0.4'],
+      iou_threshold: ['0.4'],
       marginX: ['100'],
       marginY: ['80'],
       scaleX: ['0.52'],
@@ -307,9 +311,8 @@ export class CamerasetComponent implements OnInit, OnDestroy {
     }
   }
 
-  // tslint:disable-next-line: typedef
-  // tslint:disable-next-line: ban-types
-  loadData(file: ArrayBuffer | string) {
+
+  loadData(file: ArrayBuffer | string): string[] {
     let rowCount = 0;
     const scenarios = [];
     this.parse_tsv(file, (row) => {
@@ -326,6 +329,10 @@ export class CamerasetComponent implements OnInit, OnDestroy {
       return true;
     }
     return false;
+  }
+
+  logout(): void {
+    this.router.navigate(['/login']);
   }
 
 }

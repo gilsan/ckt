@@ -183,7 +183,7 @@
 
                  <mat-form-field appearance="legacy"  class="item">
                    <mat-label>lou threshold</mat-label>
-                   <input matInput placeholder="0.4" formControlName="iouThreshold">   
+                   <input matInput placeholder="0.4" formControlName="iou_threshold">   
                  </mat-form-field>
 
               </div>
@@ -232,6 +232,12 @@
           <div>                                 <!--  추가-->
            <button mat-stroked-button color="primary" (click)='reboot()'>System</button>
           </div>
+          <div>
+            &nbsp;&nbsp;
+          </div>          
+          <div>
+            <button mat-stroked-button color="primary" (click)='logout()'>Logout</button>
+          </div>
           
         </div>
       </div>
@@ -240,8 +246,3 @@
 
   </div>
 </div>
-
-
- 
-   
-
