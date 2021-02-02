@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ConnectService } from '../connect.service';
 
 
 @Component({
@@ -15,6 +16,7 @@ export class LoginComponent implements OnInit {
   flag: string;
   passwd: string;
   constructor(
+    private service: ConnectService,
     private fb: FormBuilder,
     private router: Router) {
     this.form = this.fb.group({
@@ -24,7 +26,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // localStorage.setItem('cktUser', JSON.stringify({ initFlag: '0', pw: '123456' }));
+    /*
     localStorage.setItem('admin', JSON.stringify({
       admin: {
         user: 'admin',
@@ -82,38 +84,26 @@ export class LoginComponent implements OnInit {
         faceMinSize: '40'
       }
     }));
+    */
   }
 
   onSubmit(): void {
     console.log(this.form.value);
-    const userInfo = JSON.parse(localStorage.getItem('cktUser'));
-    this.flag = userInfo.initFlag;
-    this.passwd = userInfo.pw;
-    console.log(userInfo, userInfo.initFlag, userInfo.pw);
-    if (this.form.value.user === 'admin' && this.form.value.pw === '123456') {
-      if (this.flag === null || this.flag === undefined || this.flag === '0') {
-        const newpw = this.randomString(6, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
-        // localStorage.setItem('cktUser', JSON.stringify({ initFlag: '1', pw: newpw }));
-        // alert(`비밀번호가 ${newpw} 로 변경 되었습니다.`);
-      }
-    } else if (this.form.value.user === 'admin' && this.form.value.pw === this.passwd) {
-      if (this.flag === '1') {
+    this.service.login(this.form.value.user, this.form.value.pw).subscribe(data => {
+      console.log(data);
+      if (data.message === 'SUCCESS') {
         this.router.navigate(['/camera']);
+      } else if (data.message === 'CHANEPW') {
+        this.router.navigate(['/changepw']);
+      } else {
+        alert('시스템에 접근할수 없습니다.');
       }
+    });
 
-    }
 
   }
 
-  goChangepw(): void {
-    this.router.navigate(['/changepw']);
-  }
 
-  randomString(length, chars): string {
-    let result = '';
-    for (let i = length; i > 0; --i) { result += chars[Math.floor(Math.random() * chars.length)]; }
-    return result;
-  }
 
 
 }
