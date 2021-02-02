@@ -18,8 +18,8 @@ export class ConnectService {
     return this.http.post(`${url}/login`, { id, passwd });
   }
 
-  changepassword(passwd: string): Observable<any> {
-    return this.http.post(`${url}/changepassword`, { passwd });
+  changepassword(pw: string): Observable<any> {
+    return this.http.post(`${url}/changepassword`, { pw });
   }
 
 }

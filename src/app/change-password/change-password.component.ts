@@ -17,7 +17,7 @@ export class ChangePasswordComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(oldpw, newpw, confirmpw): void {
+  onSubmit(newpw, confirmpw): void {
     if (newpw === confirmpw) {
       this.service.changepassword(newpw)
         .subscribe(data => {
