@@ -93,7 +93,7 @@ export class LoginComponent implements OnInit {
       console.log(data);
       if (data.message === 'SUCCESS') {
         this.router.navigate(['/camera']);
-      } else if (data.message === 'CHANEPW') {
+      } else if (data.message === 'CHANGEPW') {
         this.router.navigate(['/changepw']);
       } else {
         alert('시스템에 접근할수 없습니다.');
