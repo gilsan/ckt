@@ -14,7 +14,7 @@ export class ConnectService {
 
 
   login(id: string, passwd: string): Observable<any> {
-    console.log('[service]', id, passwd);
+    // console.log('[service]', id, passwd);
     return this.http.post(`${url}/login`, { id, passwd });
   }
 

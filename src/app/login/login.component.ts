@@ -88,9 +88,9 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.form.value);
+    // console.log(this.form.value);
     this.service.login(this.form.value.user, this.form.value.pw).subscribe(data => {
-      console.log(data);
+      // console.log(data);
       if (data.message === 'SUCCESS') {
         this.router.navigate(['/camera']);
       } else if (data.message === 'CHANGEPW') {

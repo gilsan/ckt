@@ -35,7 +35,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
 
     this.http.get(`${this.url}/readfile`)
       .subscribe((data: any) => {
-        console.log(data);
+        // console.log(data);
         let cameraID: string;
         let cameraModel: string;
         let cameraserialNum: string;
@@ -73,11 +73,11 @@ export class CamerasetComponent implements OnInit, OnDestroy {
 
 
         const result = this.loadData(data);
-        console.log(data);
+        // console.log(data);
         const value = result.filter(item => item[0].charAt(0) !== '[');
         value.forEach(item => {
           const items = item[0].split('=');
-          console.log(items);
+          // console.log(items);
           if (items[0] === 'cameraID') {
             cameraID = items[1];
           } else if (items[0] === 'cameraModel') {
@@ -96,7 +96,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
             zoneID = items[1];
           } else if (items[0] === 'localIP') {
             localIP = items[1];
-          } else if (items[0] === 'localIP') {
+          } else if (items[0] === 'localPortIr') {
             localPortIr = items[1];
           } else if (items[0] === 'localPortRtsp') {
             localPortRtsp = items[1];
@@ -135,7 +135,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
             flagLiveness = items[1];
           } else if (items[0] === 'threshold') {
             threshold = items[1];
-          } else if (items[0] === 'iouThreshold') {
+          } else if (items[0] === 'iou_threshold') {
             iou_threshold = items[1];
           } else if (items[0] === 'marginX') {
             marginX = items[1];
@@ -277,14 +277,14 @@ export class CamerasetComponent implements OnInit, OnDestroy {
   }
 
   submit(): void {
-    console.log(this.cktGroup.value);
+    // console.log(this.cktGroup.value);
     if (this.cktGroup.invalid) {
       this.clrForm.markAsTouched();
     } else {
-      console.log(this.cktGroup.value);
+      // console.log(this.cktGroup.value);
       this.subs.sink = this.http.post(`${this.url}/makefile`, this.cktGroup.value)
         .subscribe(data => {
-          console.log(data);
+          // console.log(data);
           alert('화일을 만들었습니다.');
         });
     }
