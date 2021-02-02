@@ -96,7 +96,7 @@ export class LoginComponent implements OnInit {
       } else if (data.message === 'CHANGEPW') {
         this.router.navigate(['/changepw']);
       } else if (data.message === 'NOTMATCHPW') {
-        alert('Not Match password.');
+        alert('Not match password.');
       } else {
         alert('Access denied');
       }
