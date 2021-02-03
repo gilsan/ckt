@@ -15,6 +15,7 @@ import { Router } from '@angular/router';
 export class CamerasetComponent implements OnInit, OnDestroy {
 
   url = 'http://192.168.1.25:3000';
+  localip = '192.168.1.25';
 
   private subs = new SubSink();
 
@@ -282,11 +283,18 @@ export class CamerasetComponent implements OnInit, OnDestroy {
       this.clrForm.markAsTouched();
     } else {
       // console.log(this.cktGroup.value);
+
+
       this.subs.sink = this.http.post(`${this.url}/makefile`, this.cktGroup.value)
         .subscribe(data => {
-          // console.log(data);
           alert('New file made.');
+          // if (this.cktGroup.value.localIP !== this.localip) {
+          //   this.localip = this.cktGroup.value.localIP;
+          //   this.url = 'http://' + this.cktGroup.value.localIP + ':3000';
+          // }
+
         });
+
     }
   }
   // 추가
