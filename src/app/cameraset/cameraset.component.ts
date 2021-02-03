@@ -241,7 +241,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
       siteID: ['site'],
       blockID: ['block'],
       groupID: ['group'],
-      localIP: ['127.0.0.1'],
+      localIP: ['192.168.1.25'],
       localPortIr: ['5555'],
       localPortRtsp: ['8868'],
       netmask: ['255.255.255.0'],
@@ -266,7 +266,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
       marginY: ['80'],
       scaleX: ['0.52'],
       scaleY: ['0.48'],
-      faceMinSize: ['40']
+      faceMinSize: ['30']
     });
 
 
