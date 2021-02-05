@@ -286,8 +286,8 @@ export class CamerasetComponent implements OnInit, OnDestroy {
 
 
       this.subs.sink = this.http.post(`${this.url}/makefile`, this.cktGroup.value)
-        .subscribe(data => {
-          alert('New file made.');
+        .subscribe((data: { message: string }) => {
+          alert(data.message);
           // if (this.cktGroup.value.localIP !== this.localip) {
           //   this.localip = this.cktGroup.value.localIP;
           //   this.url = 'http://' + this.cktGroup.value.localIP + ':3000';

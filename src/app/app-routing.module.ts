@@ -5,11 +5,11 @@ import { CamerasetComponent } from './cameraset/cameraset.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'camera', component: CamerasetComponent },
   { path: 'changepw', component: ChangePasswordComponent },
-  // { path: '**', redirectTo: 'login', pathMatch: 'full' }
+  { path: '**', redirectTo: 'login', pathMatch: 'full' }
 
 
 ];
