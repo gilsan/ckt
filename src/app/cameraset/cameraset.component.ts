@@ -6,6 +6,8 @@ import { map, filter } from 'rxjs/operators';
 import { ClrForm } from '@clr/angular';
 import { ICamera } from '../camer.info';
 import { Router } from '@angular/router';
+import { url } from '../models';
+import { StoreService } from './../store.service';
 
 @Component({
   selector: 'app-cameraset',
@@ -14,8 +16,7 @@ import { Router } from '@angular/router';
 })
 export class CamerasetComponent implements OnInit, OnDestroy {
 
-  url = 'http://192.168.1.25:3000';
-  localip = '192.168.1.25';
+  serverurl: string;
 
   private subs = new SubSink();
 
@@ -27,14 +28,15 @@ export class CamerasetComponent implements OnInit, OnDestroy {
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
-    private router: Router
+    private router: Router,
+    private store: StoreService
   ) { }
   disableSelect = new FormControl(false);
   ngOnInit(): void {
     this.init();
+    this.serverurl = this.store.getUrl();
 
-
-    this.http.get(`${this.url}/readfile`)
+    this.http.get(`${this.serverurl}/readfile`)
       .subscribe((data: any) => {
         // console.log(data);
         let cameraID: string;
@@ -285,13 +287,12 @@ export class CamerasetComponent implements OnInit, OnDestroy {
       // console.log(this.cktGroup.value);
 
 
-      this.subs.sink = this.http.post(`${this.url}/makefile`, this.cktGroup.value)
+      this.subs.sink = this.http.post(`${this.serverurl}/makefile`, this.cktGroup.value)
         .subscribe((data: { message: string }) => {
           alert(data.message);
-          // if (this.cktGroup.value.localIP !== this.localip) {
-          //   this.localip = this.cktGroup.value.localIP;
-          //   this.url = 'http://' + this.cktGroup.value.localIP + ':3000';
-          // }
+          const ip = data.message;
+          this.store.setUrl('http://' + ip);
+          this.serverurl = 'http://' + ip + ':3000';
 
         });
 
@@ -299,7 +300,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
   }
   // 추가
   reboot(): void {
-    this.http.get(`${this.url}/reboot`)
+    this.http.get(`${this.serverurl}/reboot`)
       .subscribe(data => {
         alert('Execute.');
       });

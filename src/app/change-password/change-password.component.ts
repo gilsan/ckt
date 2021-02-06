@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { ConnectService } from '../connect.service';
+// import { ConnectService } from '../connect.service';
+import { StoreService } from './../store.service';
 
 @Component({
   selector: 'app-change-password',
@@ -10,8 +11,9 @@ import { ConnectService } from '../connect.service';
 export class ChangePasswordComponent implements OnInit {
 
   constructor(
-    private service: ConnectService,
-    private router: Router
+    // private service: ConnectService,
+    private router: Router,
+    private store: StoreService
   ) { }
 
   ngOnInit(): void {
@@ -19,7 +21,7 @@ export class ChangePasswordComponent implements OnInit {
 
   onSubmit(newpw, confirmpw): void {
     if (newpw === confirmpw) {
-      this.service.changepassword(newpw)
+      this.store.changepassword(newpw)
         .subscribe(data => {
           const msg = data.message;
           if (msg === 'SUCCESS') {
