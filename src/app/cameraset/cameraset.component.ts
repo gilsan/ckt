@@ -6,7 +6,6 @@ import { map, filter } from 'rxjs/operators';
 import { ClrForm } from '@clr/angular';
 import { ICamera } from '../camer.info';
 import { Router } from '@angular/router';
-import { url } from '../models';
 import { StoreService } from './../store.service';
 
 @Component({
@@ -299,8 +298,8 @@ export class CamerasetComponent implements OnInit, OnDestroy {
     }
   }
   // 추가
-  reboot(): void {
-    this.http.get(`${this.serverurl}/reboot`)
+  initial(): void {
+    this.http.get(`${this.serverurl}/initial`)
       .subscribe(data => {
         alert('Execute.');
       });

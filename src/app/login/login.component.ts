@@ -1,8 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-// import { ConnectService } from '../connect.service';
-import { url } from '../models';
 import { DOCUMENT } from '@angular/common';
 import { StoreService } from '../store.service';
 
@@ -25,15 +23,12 @@ export class LoginComponent implements OnInit {
     private store: StoreService                     // 2. we need the injector to ..
   ) {
     this.form = this.fb.group({
-      user: ['admin'],
-      pw: ['123456']
+      user: [],
+      pw: []
     });
   }
 
-  ngOnInit(): void {
-    const serverurl = url;
-
-  }
+  ngOnInit(): void { }
 
   onSubmit(): void {
     // console.log(this.form.value);
