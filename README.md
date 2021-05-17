@@ -4,7 +4,11 @@
 
    - ApacheII : 
 
-   - Node.js (nodejs.org): 환경파일저장
+   - Node.js (nodejs.org): 환경파일저장, javascript로 작성한 파일이 app.js 경우, 실행 #> node app.js 
+
+   - npm install forever 내려받은다.
+
+   - 실행 forever start app.js 종료: forever stop app.js : 데몬이 죽으면 자동으로 다시 시작함.
 
 2. Angular compile:
 
