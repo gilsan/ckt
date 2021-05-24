@@ -1,27 +1,25 @@
 # Ckt
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+1. 설치 프로그램
 
-## Development server
+   - ApacheII : 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+   - Node.js (nodejs.org): 환경파일저장, javascript로 작성한 파일이 app.js 경우, 실행 #> node app.js 
 
-## Code scaffolding
+   - npm install forever 내려받은다.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+   - 실행 forever start app.js 종료: forever stop app.js : 데몬이 죽으면 자동으로 다시 시작함.
 
-## Build
+2. Angular compile:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+  - git 에서 소스를 내려받는다.
 
-## Running unit tests
+  - Visual Studio Code에서 package.json에 있는 패키지를 내려받는다.  - npm install
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  - Visual Studio Code에서 컴파일 한다.
 
-## Running end-to-end tests
+  - ng build --prod=true
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+  - dist/ckt 아래에 컴파일된 js 가 있음. 전체파일 복사
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  - ApacheII로 전송한다.
