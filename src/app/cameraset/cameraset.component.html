@@ -2,11 +2,11 @@
 
   <div class="container main-box">
 
-    <form  clrForm [formGroup]="cktGroup"> 
+    <form  clrForm [formGroup]="cktGroup">
       <div  class="container">
           <div class="tabs">
             <mat-tab-group>
-              <mat-tab label="BaseInfo"  class="baseinfo">
+              <mat-tab label="Base Infor'"  class="baseinfo">
                 <div class="infobox">
                    <mat-form-field appearance="legacy" class="item">
                      <mat-label>Camera ID</mat-label>
@@ -15,21 +15,21 @@
 
                    <mat-form-field appearance="legacy"  class="item">
                      <mat-label>Camera Model</mat-label>
-                     <input matInput placeholder="ms_mini" formControlName="cameraModel">  
+                     <input matInput placeholder="ms_mini" formControlName="cameraModel">
                    </mat-form-field>
 
                    <mat-form-field appearance="legacy"  class="item">
                      <mat-label>Camera Serial Number</mat-label>
-                     <input matInput placeholder="1423593456" formControlName="cameraserialNum">   
+                     <input matInput placeholder="1423593456" formControlName="cameraserialNum">
                    </mat-form-field>
 
                    <mat-form-field appearance="legacy"  class="item">
                      <mat-label>Camera Install Date</mat-label>
-                     <input matInput placeholder="20201120" formControlName="cameraInstallDate">  
-                   </mat-form-field>                   
+                     <input matInput placeholder="20201120" formControlName="cameraInstallDate">
+                   </mat-form-field>
 
                    <mat-form-field appearance="legacy"  class="item">
-                     <mat-label>Camer Use YN</mat-label>
+                     <mat-label>Camera Use Y/N</mat-label>
                      <mat-select formControlName="cameraUseyn">
                        <mat-option value="0">Yes</mat-option>
                        <mat-option value="1">No</mat-option>
@@ -37,192 +37,192 @@
                    </mat-form-field>
                 </div>
               </mat-tab>
-              <mat-tab label="LocationInfo">
+              <mat-tab label="Location Infor'">
                <div class="infobox">
                  <mat-form-field appearance="legacy" class="item">
-                   <mat-label>Site ID</mat-label>
+                   <mat-label>Site Name</mat-label>
                    <input matInput placeholder="site" formControlName="siteID">
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>Block ID</mat-label>
-                   <input matInput placeholder="block" formControlName="blockID">        
+                   <mat-label>Block Name</mat-label>
+                   <input matInput placeholder="block" formControlName="blockID">
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>Group ID</mat-label>
-                   <input matInput placeholder="group" formControlName="groupID">   
+                   <mat-label>Group Name</mat-label>
+                   <input matInput placeholder="group" formControlName="groupID">
                  </mat-form-field>
-              </div>                 
+              </div>
               </mat-tab>
-              <mat-tab label="NetworkInfo">
+              <mat-tab label="Network Infor'">
                <div class="infobox">
                  <mat-form-field appearance="legacy" class="item">
-                   <mat-label>Local IP</mat-label>
+                   <mat-label>Local IP Address</mat-label>
                    <input matInput placeholder="192.168.1.25" formControlName="localIP">
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>Local Port ir</mat-label>
-                   <input matInput placeholder="5555" formControlName="localPortIr">  
+                   <mat-label>Local IR Port</mat-label>
+                   <input matInput placeholder="5555" formControlName="localPortIr">
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>Local port rtsp</mat-label>
-                   <input matInput placeholder="8868" formControlName="localPortRtsp">   
+                   <mat-label>Local RTSP Port</mat-label>
+                   <input matInput placeholder="8868" formControlName="localPortRtsp">
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>Netmask</mat-label>
-                   <input matInput placeholder="255.255.255.0" formControlName="netmask">  
-                 </mat-form-field>                   
+                   <mat-label>Subnet mask</mat-label>
+                   <input matInput placeholder="255.255.255.0" formControlName="netmask">
+                 </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
                    <mat-label>Gateway</mat-label>
-                   <input matInput placeholder="0.0.0.0" formControlName="gateway"> 
+                   <input matInput placeholder="0.0.0.0" formControlName="gateway">
                  </mat-form-field>
-              </div>                 
+              </div>
               </mat-tab>
-              <mat-tab label="HostInfo">
+              <mat-tab label="Host Infor'">
                <div class="infobox">
                  <mat-form-field appearance="legacy" class="item">
-                   <mat-label>Host ip recon</mat-label>
+                   <mat-label>Recognition Host IP Address</mat-label>
                    <input matInput placeholder="192.168.100" formControlName="hostIpRecon">
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>Host port recon</mat-label>
-                   <input matInput placeholder="8866" formControlName="hostPortRecon">  
+                   <mat-label>Recognition Host Port(8866)</mat-label>
+                   <input matInput placeholder="8866" formControlName="hostPortRecon">
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>Host ip cloud</mat-label>
-                   <input matInput placeholder="192.168.1.200" formControlName="hostIpCloud">   
+                   <mat-label>Cloud Host IP Address</mat-label>
+                   <input matInput placeholder="192.168.1.200" formControlName="hostIpCloud">
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>Host port cloud</mat-label>
-                   <input matInput placeholder="0000" formControlName="hostPortCloud">  
-                 </mat-form-field>                   
-
-                 <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>Host ip mqtt</mat-label>
-                   <input matInput placeholder="192.168.1.100" formControlName="hostIpMqtt"> 
+                   <mat-label>Cloud Host Port</mat-label>
+                   <input matInput placeholder="0000" formControlName="hostPortCloud">
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>Host port mqtt</mat-label>
-                   <input matInput placeholder="8869" formControlName="hostportMqtt">  
+                   <mat-label>MQTT Host IP Address</mat-label>
+                   <input matInput placeholder="192.168.1.100" formControlName="hostIpMqtt">
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>mqtt user id</mat-label>
-                   <input matInput placeholder="ctk_user" formControlName="mqttUserId">   
+                   <mat-label>MQTT Host Port(8869)</mat-label>
+                   <input matInput placeholder="8869" formControlName="hostportMqtt">
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>mqtt password</mat-label>
-                   <input matInput placeholder="ctk_user" formControlName="mqttPassword">  
-                 </mat-form-field>                   
-
-                 <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>Mqtt pub topic</mat-label>
-                   <input matInput placeholder="camera/test1" formControlName="mqttPubTopic"> 
-                 </mat-form-field>
-
-              </div>  
-
-              </mat-tab>
-              <mat-tab label="ParameterInfo">
-               <div class="infobox">
-                 <mat-form-field appearance="legacy" class="item">
-                   <mat-label>flag op mode</mat-label>
-                   <mat-select formControlName="flagOpMode">
-                    <mat-option value="0">Run</mat-option>
-                    <mat-option value="1">Debug</mat-option>
-                  </mat-select>                   
-                 </mat-form-field>
-
-                 
-                 <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>flag face temperature</mat-label>
-                   <mat-select formControlName="flagFaceTemperature">
-                    <mat-option value="0">Yes</mat-option>
-                    <mat-option value="1">No</mat-option>
-                  </mat-select>                    
+                   <mat-label>MQTT User ID</mat-label>
+                   <input matInput placeholder="ctk_user" formControlName="mqttUserId">
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>flag face mask</mat-label>
-                   <mat-select formControlName="flagFaceMask">
-                    <mat-option value="0">Yes</mat-option>
-                    <mat-option value="1">No</mat-option>
-                  </mat-select>                   
+                   <mat-label>MQTT User Password</mat-label>
+                   <input matInput placeholder="ctk_user" formControlName="mqttPassword">
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>flag recognition</mat-label>
-                   <mat-select formControlName="flagRecognition">
-                    <mat-option value="0">Yes</mat-option>
-                    <mat-option value="1">No</mat-option>
-                  </mat-select>                    
-                 </mat-form-field>                   
-
-                 <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>flag liveness</mat-label>
-                   <mat-select formControlName="flagLiveness">
-                    <mat-option value="0">Yes</mat-option>
-                    <mat-option value="1">No</mat-option>
-                  </mat-select>                   
-                 </mat-form-field>
-
-                 <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>threshold</mat-label>
-                   <input matInput placeholder="0.9" formControlName="threshold">  
-                 </mat-form-field>
-
-                 <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>lou threshold</mat-label>
-                   <input matInput placeholder="0.4" formControlName="iou_threshold">   
+                   <mat-label>MQTT Pub Topic</mat-label>
+                   <input matInput placeholder="camera/test1" formControlName="mqttPubTopic">
                  </mat-form-field>
 
               </div>
 
               </mat-tab>
-              <mat-tab label="MargineInfo">
+              <mat-tab label="Parameter Infor'">
                <div class="infobox">
                  <mat-form-field appearance="legacy" class="item">
-                   <mat-label>margin x</mat-label>
+                   <mat-label>Operation Mode</mat-label>
+                   <mat-select formControlName="flagOpMode">
+                    <mat-option value="0">Run</mat-option>
+                    <mat-option value="1">Debug</mat-option>
+                  </mat-select>
+                 </mat-form-field>
+
+
+                 <mat-form-field appearance="legacy"  class="item">
+                   <mat-label>Face Temperature Detection</mat-label>
+                   <mat-select formControlName="flagFaceTemperature">
+                    <mat-option value="0">Yes</mat-option>
+                    <mat-option value="1">No</mat-option>
+                  </mat-select>
+                 </mat-form-field>
+
+                 <mat-form-field appearance="legacy"  class="item">
+                   <mat-label>Face Mask Detection</mat-label>
+                   <mat-select formControlName="flagFaceMask">
+                    <mat-option value="0">Yes</mat-option>
+                    <mat-option value="1">No</mat-option>
+                  </mat-select>
+                 </mat-form-field>
+
+                 <mat-form-field appearance="legacy"  class="item">
+                   <mat-label>Face Recognition</mat-label>
+                   <mat-select formControlName="flagRecognition">
+                    <mat-option value="0">Yes</mat-option>
+                    <mat-option value="1">No</mat-option>
+                  </mat-select>
+                 </mat-form-field>
+
+                 <mat-form-field appearance="legacy"  class="item">
+                   <mat-label>Face Liveness Detection</mat-label>
+                   <mat-select formControlName="flagLiveness">
+                    <mat-option value="0">Yes</mat-option>
+                    <mat-option value="1">No</mat-option>
+                  </mat-select>
+                 </mat-form-field>
+
+                 <mat-form-field appearance="legacy"  class="item">
+                   <mat-label>Threshold(0.0~1.0, default:0.9)</mat-label>
+                   <input matInput placeholder="0.9" formControlName="threshold">
+                 </mat-form-field>
+
+                 <mat-form-field appearance="legacy"  class="item">
+                   <mat-label>IOU Threshold(0.0~1.0, default:0.4)</mat-label>
+                   <input matInput placeholder="0.4" formControlName="iou_threshold">
+                 </mat-form-field>
+
+              </div>
+
+              </mat-tab>
+              <mat-tab label="Margine Infor'">
+               <div class="infobox">
+                 <mat-form-field appearance="legacy" class="item">
+                   <mat-label>Axis-X Margin(default:100)</mat-label>
                    <input matInput placeholder="100" formControlName="marginX">
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>margin y</mat-label>
-                   <input matInput placeholder="80" formControlName="marginY">        
+                   <mat-label>Axis-Y Margin(default:80)</mat-label>
+                   <input matInput placeholder="80" formControlName="marginY">
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>scale x</mat-label>
-                   <input matInput placeholder="0.52" formControlName="scaleX">   
+                   <mat-label>Axis-X Scale(default:0.52)</mat-label>
+                   <input matInput placeholder="0.52" formControlName="scaleX">
                  </mat-form-field>
 
                  <mat-form-field appearance="legacy"  class="item">
-                   <mat-label>scale y</mat-label>
-                   <input matInput placeholder="0.48" formControlName="scaleY">   
-                 </mat-form-field>                  
-              </div>                    
+                   <mat-label>Axis-Y Scale(default:0.48)</mat-label>
+                   <input matInput placeholder="0.48" formControlName="scaleY">
+                 </mat-form-field>
+              </div>
               </mat-tab>
-              <mat-tab label="FaceMinSizeInfo">
+              <mat-tab label="Face Detection Infor'">
                 <div class="infobox">
                   <mat-form-field appearance="legacy"  class="item">
-                    <mat-label>face min size</mat-label>
-                    <input matInput placeholder="40" formControlName="faceMinSize">   
-                  </mat-form-field>                  
-                </div>                 
+                    <mat-label>Face Minimum Size(30~80)</mat-label>
+                    <input matInput placeholder="40" formControlName="faceMinSize">
+                  </mat-form-field>
+                </div>
               </mat-tab>
             </mat-tab-group>
           </div>
-        
+
         <div  class="btn-group">
           <div>
            <button mat-raised-button color="primary"
@@ -232,15 +232,17 @@
             &nbsp;&nbsp;
           </div>
           <div>                                 <!--  추가-->
-           <button mat-stroked-button color="primary" (click)='initial()'>Initialize</button>
+           <button mat-stroked-button color="primary"
+            (click)='initial()'>Initialize</button>
           </div>
           <div>
             &nbsp;&nbsp;
-          </div>          
-          <div>
-            <button mat-stroked-button color="primary" (click)='logout()'>Logout</button>
           </div>
-          
+          <div>
+            <button mat-stroked-button color="primary"
+             (click)='logout()'>Logout</button>
+          </div>
+
         </div>
       </div>
 
