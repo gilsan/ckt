@@ -37,7 +37,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
 
     this.http.get(`${this.serverurl}/readfile`)
       .subscribe((data: any) => {
-        // console.log(data);
+        // console.log('[cameraset][설정화일읽어오기]', data);
         let cameraID: string;
         let cameraModel: string;
         let cameraserialNum: string;
@@ -189,7 +189,7 @@ export class CamerasetComponent implements OnInit, OnDestroy {
 
       });
 
-    /* 
+    /*
     this.http.get(`${this.url}/readfile`)
       .subscribe((data: ICamera) => {
         console.log(data);

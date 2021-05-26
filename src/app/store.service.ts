@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class StoreService {
+  // serverip = 'http://192.168.1.25:3000';
   serverip = 'http://192.168.1.25:3000';
 
   constructor(
@@ -15,6 +16,7 @@ export class StoreService {
 
 
   setUrl(ip: string): void {
+    // console.log('setUrl', ip);
     this.serverip = ip;
   }
 
@@ -24,7 +26,7 @@ export class StoreService {
 
 
   login(id: string, passwd: string): Observable<any> {
-    // console.log('[service]', id, passwd);
+    // console.log('[service]', id, passwd, `${this.serverip}`);
     return this.http.post(`${this.serverip}/login`, { id, passwd });
   }
 
